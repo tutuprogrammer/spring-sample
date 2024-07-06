@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = "org.example.lifecycle")
+@ComponentScan(basePackages = "org.example")
 public class Config {
 
     @Bean(name = "myBean", initMethod = "doInit", destroyMethod = "doDestory")

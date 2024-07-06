@@ -5,11 +5,6 @@ import org.springframework.stereotype.Component;
 class MyBean {
     private String name;
 
-    public String getName() {
-        System.out.println("execute MyBean#getName()");
-        return name;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -19,5 +14,9 @@ class MyBean {
         return "MyBean{" +
                 "name='" + name + '\'' +
                 '}';
+    }
+
+    public void exec() {
+        System.out.println("execute MyBean#exec()");
     }
 }

@@ -8,7 +8,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 public class Application {
     public static void main(String[] args) {
-        //三个类都放在org.example包下,扫描这个包下所有Bean
         BeanFactory beanFactory = new AnnotationConfigApplicationContext(Config.class);
         //这是正常注册的Bean实例
         MyBean myBean = (MyBean) beanFactory.getBean("myBean");
