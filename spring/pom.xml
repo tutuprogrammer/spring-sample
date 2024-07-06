@@ -16,8 +16,9 @@
   <name>spring</name>
   <url>http://maven.apache.org</url>
   <modules>
-    <module>spring-ioc</module>
-    <module>spring-aop</module>
+    <module>bean-lifecycle</module>
+    <module>factorybean-aop</module>
+    <module>getbean</module>
   </modules>
 
 
@@ -28,8 +29,8 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
     </dependency>
   </dependencies>
 

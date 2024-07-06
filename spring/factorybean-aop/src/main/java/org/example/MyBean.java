@@ -2,7 +2,6 @@ package org.example;
 
 import org.springframework.stereotype.Component;
 
-@Component
 class MyBean {
     private String name;
 

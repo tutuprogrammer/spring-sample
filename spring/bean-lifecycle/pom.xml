@@ -7,10 +7,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-ioc</artifactId>
+    <artifactId>bean-lifecycle</artifactId>
     <packaging>jar</packaging>
 
-    <name>spring-ioc</name>
+    <name>factorybean-aop</name>
     <url>http://maven.apache.org</url>
 
     <properties>

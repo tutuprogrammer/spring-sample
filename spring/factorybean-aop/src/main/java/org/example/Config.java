@@ -3,16 +3,13 @@ package org.example;
 import org.springframework.aop.AfterReturningAdvice;
 import org.springframework.aop.MethodBeforeAdvice;
 import org.springframework.aop.framework.ProxyFactoryBean;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * Hello world!
- */
 @Configuration
-public class App {
+@ComponentScan(basePackages = "org.example")
+public class Config {
 
     @Bean(name = "beforeAdvice")
     public MethodBeforeAdvice beforeAdvice() {
@@ -26,6 +23,14 @@ public class App {
         return (returnValue, method, args, target) -> System.out.println("execute AfterReturningAdvice#afterReturning()");
     }
 
+    @Bean(name = "myBean")
+    public MyBean myBean()
+    {
+        MyBean myBean = new MyBean();
+        myBean.setName("myBean");
+        return myBean;
+    }
+
     @Bean(name = "proxyBean")
     public ProxyFactoryBean proxyBean(MyBean myBean) {
         ProxyFactoryBean proxyFactoryBean = new ProxyFactoryBean();
@@ -34,14 +39,5 @@ public class App {
         //指定前置后置通知
         proxyFactoryBean.setInterceptorNames("beforeAdvice", "afterReturningAdvice");
         return proxyFactoryBean;
-    }
-
-    public static void main(String[] args) {
-        //类都放在org.example包下,扫描这个包下所有Bean
-        BeanFactory beanFactory = new AnnotationConfigApplicationContext("org.example");
-        //getBean()如果不带&前缀,返回的是生产的Bean,这里是MyBean的代理了
-        MyBean myBean = (MyBean) beanFactory.getBean("proxyBean");
-        //调用方法,会执行前置和后置通知
-        myBean.getName();
     }
 }
