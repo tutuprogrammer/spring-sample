@@ -19,6 +19,7 @@
     <module>bean-lifecycle</module>
     <module>factorybean-aop</module>
     <module>getbean</module>
+      <module>bean-cycle-reference</module>
   </modules>
 
 
