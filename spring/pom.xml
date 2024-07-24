@@ -16,10 +16,11 @@
   <name>spring</name>
   <url>http://maven.apache.org</url>
   <modules>
-    <module>bean-lifecycle</module>
-    <module>factorybean-aop</module>
-    <module>getbean</module>
-      <module>bean-cycle-reference</module>
+    <module>spring-bean-lifecycle-example</module>
+    <module>spring-factorybean-aop-example</module>
+    <module>spring-factorybean-example</module>
+      <module>spring-bean-cycle-reference-example</module>
+    <module>spring-transaction</module>
   </modules>
 
 
