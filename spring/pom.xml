@@ -20,7 +20,8 @@
     <module>spring-factorybean-aop-example</module>
     <module>spring-factorybean-example</module>
       <module>spring-bean-cycle-reference-example</module>
-    <module>spring-transaction</module>
+    <module>spring-transaction-example</module>
+    <module>spring-aspect-aop-example</module>
   </modules>
 
 
