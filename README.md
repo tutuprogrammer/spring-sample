@@ -1,1 +1,1 @@
-记录Spring相关学习笔记
+spring demo for explaining component running mechanism
