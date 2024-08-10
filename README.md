@@ -1,1 +1,1 @@
-spring demo for explaining component running mechanism
+spring sample for explaining component running mechanism
